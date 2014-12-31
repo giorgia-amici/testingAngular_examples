@@ -40,3 +40,16 @@ and one module globally that will allow us to run karma from the command line.
 ```javascript
 npm install karma-cli -g
 ```
+
+ After having installed all these packages, you need a configuration file. Just type:
+
+ ```javascript 
+karma init
+ ```
+
+ Then, just run Karma specifying the folder in which the config file is:
+
+ ```javascript
+
+ karma start test/karma.conf.js
+ ```
