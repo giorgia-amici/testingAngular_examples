@@ -5,9 +5,7 @@ partyApp.controller('CreateNewParty',
 				organizer: 'Giorgia',
 				location: 'London',
 				date: '1/1/2013'
-
 			} 
-			console.log($scope)
-			console.log($scope.name)
 	}
 );
+// I want to display those in the homepage
