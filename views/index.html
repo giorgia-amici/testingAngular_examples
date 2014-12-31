@@ -6,23 +6,43 @@
 	  <link rel="stylesheet" href="css/bootstrap.min.css">
 	 <title> TESTING PARTY </title>
 </head>
-<body ng-controller="CreateNewParty">
-	<form id="createNewParty">
-	<label for="partyName">Event Name</label>
-	<input id="partyName" type="text" required ng-model="party.name" placeholder="Name of your party event">
-	<label for="partyOrganizer">Party Organizer</label>
-	<input id="partyOrganizer" type="text" required ng-model="party.organizer">
-	<label for="partyLocation">Party Location</label>
-	<input id="partyLocation" type="text" ng-model="party.location">
-	<label for="partyDate"> On Date: </label>
-	<input id="partyDate" type="text" required ng-pattern="/\d\d/\d\d/\d\d\d/" ng-model="party.date">
-	<button type="submit" ng-click="createEvent()" class="btn btn-primary">Create</button>
-	</form>
+<body ng-controller="DisplayAvailableParty">
+  <div class="container">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li><a href="/NewParty">Add a party</a>
+          </li>
+          <li><a href="/editProfile">Nothing here</a>
+        </ul>
+      </div>
+    </div>
+  <div class="row">
+        <div class="span3">
+          <div><strong>Date:  {{party.date}} </strong>
+          </div>
+          <div><strong> Organizer:  {{party.organizer}} </strong>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="span4">
+          <address> 
+        <strong> Address: {{party.location}}</strong>
+    </address>
+        </div>
+      </div>
+      <hr />
+      <h3> Sessions </h3> Order by:
+      <select ng-model="sortorder" class="input-small">
+        <option selected value="name">Name</option>
+        <option value="-upVoteCount">Votes</option>
+      </select>
 	<script src="bower_components/jquery/dist/jquery.js"></script>
-	<script src="bower_components/bootstrap/dist/bootstrap.min.css"></script>
 	<script src="bower_components/angular/angular.js"></script>
 	<script src="bower_components/angular-resource/angular-resource.js"></script>
 	<script src="app.js"></script>
+	<script src="controllers/DisplayAvailableParty.js"></script>
 	<script src="controllers/CreateNewParty.js"></script>
 </body>
 </html>

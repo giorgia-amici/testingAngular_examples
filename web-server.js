@@ -22,6 +22,10 @@ app.get('/', function(request, response){
   response.render('index')
 });
 
+app.get('/NewParty', function(request, response){
+  response.render('NewParty')
+});
+
 
 server.listen(3000, function(){
   console.log("Server listening on port 3000");
