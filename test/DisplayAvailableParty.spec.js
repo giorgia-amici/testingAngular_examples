@@ -1,16 +1,15 @@
-describe('DescribeAvailableParty', function(){
-	beforeEach(module('partyApp'));
+describe('DisplayAvailableParty', function() {
+  beforeEach(module('partyApp'));
 
-	var scope, ctrl;
+  var ctrl, scope;
 
-	beforeEach(inject(function($rootScope, $controller){
-		scope = $rootScope.$new();
-		ctrl = $controller('DescribeAvailableParty', {
-			$scope: scope
-		});
-	}));
+  beforeEach(inject(function($rootScope, $controller){
+    scope = $rootScope.$new();
+    ctrl = $controller('DisplayAvailableParty', {
+    	$scope: scope
+    });
+  }));
+})
 
-	it('should display the name, location, date and organizer of a default event', function(){
-		expect(scope.party).toBeUndefined();
-	});
-});
+// Because controllers are not available on the global scope, we need to use angular.mock.inject
+//  to inject our controller first. The first step is to use the module function,
