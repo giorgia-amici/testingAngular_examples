@@ -9,4 +9,8 @@ describe('DescribeAvailableParty', function(){
 			$scope: scope
 		});
 	}));
+
+	it('should display the name, location, date and organizer of a default event', function(){
+		expect(scope.party).not.toBeUndefined();
+	});
 });
