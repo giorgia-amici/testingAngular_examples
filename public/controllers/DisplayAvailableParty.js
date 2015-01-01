@@ -1,8 +1,8 @@
 partyApp.controller('DisplayAvailableParty',
 	function DisplayAvailableParty($scope){
 			$scope.party = {
-					name: 'Giorgia',
-					organizer: 'IDUNNO',
+					name: 'First Party',
+					organizer: 'Giorgia',
 					location: 'London',
 					date: '1/1/2013'
 			};

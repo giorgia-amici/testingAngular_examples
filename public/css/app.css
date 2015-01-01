@@ -7,6 +7,17 @@ select, textarea {
   color: #52575c;
 }
 
+.row {
+  margin-top: 100px;
+  padding-left:200px; 
+  padding-right:200px;
+}
+
+/*form.partyLocation {
+  width:97%; 
+  color:#52575c;
+}
+*/
 .well-title {
   margin-top: 0px;
 }

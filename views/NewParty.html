@@ -7,19 +7,23 @@
 	 <title> TESTING PARTY </title>
 </head>
 <body>
-<div id="firstdiv" ng-controller="CreateNewParty">
+<div class="row">
+<div class="span11">
+<div class="firstdiv" ng-controller="CreateNewParty">
 	<form id="createNewParty" ng-submit="submit()">
 	<label for="partyName">Event Name</label>
-	<input id="partyName" type="text" required ng-model="name" placeholder="Name of your party event">
+	<input id="partyName" type="text" required ng-model="name" placeholder="Name your Event"></br> 
 	<label for="partyOrganizer">Party Organizer</label>
-	<input id="partyOrganizer" type="text" required ng-model="organizer">
-	<label for="partyLocation">Party Location</label>
-	<input id="partyLocation" type="text" ng-model="location">
+	<input id="partyOrganizer" type="text" required ng-model="organizer" placeholder="Organized by"></br> 
+	<label for="partyLocation">Party Location</label> 
+	<input id="partyLocation" type="text" style="width:37%; color:#52575c" ng-model="location" placeholder="Where"></br> 
 	<label for="partyDate"> On Date: </label>
-	<input id="partyDate" type="text" required ng-pattern="/\d\d/\d\d/\d\d\d/" ng-model="date">
+	<input id="partyDate" type="text" required ng-pattern="/\d\d/\d\d/\d\d\d/" ng-model="date" placeholder="DD/MM/YYYY"></br> 
 	<button type="submit" class="btn btn-primary">Create</button>
 	</form>
 	 {{party.name}}
+</div>
+</div>
 </div>
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/angular/angular.js"></script>
