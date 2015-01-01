@@ -6,7 +6,6 @@ describe('Controllers', function() {
   beforeEach(inject(function($rootScope, $controller){
     scope = $rootScope.$new();
     ctrl = $controller('DisplayAvailableParty', {$scope: scope});
-    // expect($scope.party).toBeDefined();
   }));
 
   describe('DisplayAvailableParty', function(){
