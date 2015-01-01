@@ -2,9 +2,10 @@ partyApp.controller('CreateNewParty',
 	function CreateNewParty($scope){
 			$scope.submit = function(){
 				$scope.party= {name: $scope.name, organizer: $scope.organizer, location: $scope.location, date: $scope.date}
-				console.log($scope.party)
-				// return $scope.newParty
-			}
+			};
+			$scope.showMe = function(){
+				if($scope.party !== undefined){return $scope.party}
+			};
 		}
 );
 

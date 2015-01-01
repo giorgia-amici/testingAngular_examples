@@ -21,7 +21,7 @@
 	<input id="partyDate" type="text" required ng-pattern="/\d\d/\d\d/\d\d\d/" ng-model="date" placeholder="DD/MM/YYYY"></br> 
 	<button type="submit" class="btn btn-primary">Create Party</button>
 	</form>
-	 <div ng-show="party !== undefined" class="row" >
+	 <div ng-show="showMe()" class="row" >
         <div class="span3">
         		<div> <strong>Venue Name:{{party.name}}</strong></div>
 	          <div> <strong>Date:{{party.date}}</strong>
@@ -31,7 +31,7 @@
         </div>
     </div>
      <div>
-        <div ng-show="party !== undefined" class="span4">
+        <div ng-show="showMe()" class="span4">
           <address> 
         		<strong> Address: {{party.location}}</strong>
     			</address>
