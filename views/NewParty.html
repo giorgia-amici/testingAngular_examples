@@ -7,7 +7,8 @@
 	 <title> TESTING PARTY </title>
 </head>
 <body>
-	<form id="createNewParty" ng-submit="submit()" ng-controller="CreateNewParty">
+<div id="firstdiv" ng-controller="CreateNewParty">
+	<form id="createNewParty" ng-submit="submit()">
 	<label for="partyName">Event Name</label>
 	<input id="partyName" type="text" required ng-model="name" placeholder="Name of your party event">
 	<label for="partyOrganizer">Party Organizer</label>
@@ -17,8 +18,9 @@
 	<label for="partyDate"> On Date: </label>
 	<input id="partyDate" type="text" required ng-pattern="/\d\d/\d\d/\d\d\d/" ng-model="date">
 	<button type="submit" class="btn btn-primary">Create</button>
-	{{party.name}}
 	</form>
+	 {{party.name}}
+</div>
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/angular/angular.js"></script>
 	<script src="bower_components/angular-resource/angular-resource.js"></script>
