@@ -1,16 +1,13 @@
-
-
-
 partyApp.controller('CreateNewParty',
 	function CreateNewParty($scope){
-			$scope.party = {
-				name: 'GiorgiaUUU',
-				organizer: 'Giorgia',
-				location: 'London',
-				date: '1/1/2013'
-			} 
-	}
+			$scope.submit = function(){
+				$scope.party= {name: $scope.name, organizer: $scope.organizer, location: $scope.location, date: $scope.date}
+				console.log($scope.party)
+				// return $scope.newParty
+			}
+		}
 );
+
 
 
 

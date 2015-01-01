@@ -26,6 +26,9 @@ app.get('/NewParty', function(request, response){
   response.render('NewParty')
 });
 
+// app.post('/', function(request, response){
+
+// });
 
 server.listen(3000, function(){
   console.log("Server listening on port 3000");

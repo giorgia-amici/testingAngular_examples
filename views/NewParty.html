@@ -6,21 +6,23 @@
 	  <link rel="stylesheet" href="css/bootstrap.min.css">
 	 <title> TESTING PARTY </title>
 </head>
-<body ng-controller="CreateNewParty">
-	<form id="createNewParty">
+<body>
+	<form id="createNewParty" ng-submit="submit()" ng-controller="CreateNewParty">
 	<label for="partyName">Event Name</label>
-	<input id="partyName" type="text" required ng-model="party.name" placeholder="Name of your party event">
+	<input id="partyName" type="text" required ng-model="name" placeholder="Name of your party event">
 	<label for="partyOrganizer">Party Organizer</label>
-	<input id="partyOrganizer" type="text" required ng-model="party.organizer">
+	<input id="partyOrganizer" type="text" required ng-model="organizer">
 	<label for="partyLocation">Party Location</label>
-	<input id="partyLocation" type="text" ng-model="party.location">
+	<input id="partyLocation" type="text" ng-model="location">
 	<label for="partyDate"> On Date: </label>
-	<input id="partyDate" type="text" required ng-pattern="/\d\d/\d\d/\d\d\d/" ng-model="party.date">
-	<button type="submit" ng-click="createEvent()" class="btn btn-primary">Create</button>
+	<input id="partyDate" type="text" required ng-pattern="/\d\d/\d\d/\d\d\d/" ng-model="date">
+	<button type="submit" class="btn btn-primary">Create</button>
+	{{party.name}}
 	</form>
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/angular/angular.js"></script>
 	<script src="bower_components/angular-resource/angular-resource.js"></script>
+	<script src="bower_components/angular-route/angular-route.min.js"></script>
 	<script src="app.js"></script>
 	<script src="controllers/DisplayAvailableParty.js"></script>
 	<script src="controllers/CreateNewParty.js"></script>
