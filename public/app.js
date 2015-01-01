@@ -1,1 +1,1 @@
-var partyApp = angular.module('partyApp',[]);
+var partyApp = angular.module('partyApp', []);
