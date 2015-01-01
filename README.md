@@ -54,4 +54,5 @@ karma init
  karma start test/karma.conf.js
  ```
 
- Be aware that the config file has to be accurate or your tests won't run. See [this](http://karma-runner.github.io/0.8/config/configuration-file.html) link for more information
+ Be aware that the config file has to be accurate or your tests won't run. See [this](http://karma-runner.github.io/0.8/config/configuration-file.html) link for more information.
+ 
