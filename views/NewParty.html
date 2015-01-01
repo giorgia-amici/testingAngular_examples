@@ -19,10 +19,25 @@
 	<input id="partyLocation" type="text" style="width:37%; color:#52575c" ng-model="location" placeholder="Where"></br> 
 	<label for="partyDate"> On Date: </label>
 	<input id="partyDate" type="text" required ng-pattern="/\d\d/\d\d/\d\d\d/" ng-model="date" placeholder="DD/MM/YYYY"></br> 
-	<button type="submit" class="btn btn-primary">Create</button>
+	<button type="submit" class="btn btn-primary">Create Party</button>
 	</form>
-	 {{party.name}}
-</div>
+	 <div ng-show="party !== undefined" class="row" >
+        <div class="span3">
+        		<div> <strong>Venue Name:{{party.name}}</strong></div>
+	          <div> <strong>Date:{{party.date}}</strong>
+	          </div>
+	          <div> <strong>Organizer:{{party.organizer}}</strong>
+	          </div>
+        </div>
+    </div>
+     <div>
+        <div ng-show="party !== undefined" class="span4">
+          <address> 
+        		<strong> Address: {{party.location}}</strong>
+    			</address>
+       	</div>
+      </div>
+		</div>
 </div>
 </div>
 	<script src="bower_components/jquery/dist/jquery.js"></script>
