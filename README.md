@@ -66,3 +66,5 @@ karma init
 - ```template``` folder in home route (hint: remember difference between templates and views).
 - Refactor your html in the __template__ folder.
 - You don not need to specify your controller anymore.
+- **IMPORTANT STEP**: you need to change your __module__ and insert the ```.config``` and keep in mind that will still return a  module hence, you can still concatenate your factory methods.
+- Inject all the new dependencies (check the version of angular you are actually using).
