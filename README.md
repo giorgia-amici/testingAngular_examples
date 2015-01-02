@@ -57,9 +57,10 @@ karma init
  Be aware that the config file has to be accurate or your tests won't run. See [this](http://karma-runner.github.io/0.8/config/configuration-file.html) link for more information.
  
 
- ###Routing
+##**Routing**
 
  In this really trivial project I have included also routing and how to test $route in Angular.
 
 - ```index.html``` will be your SPA
-- in ```index.html``` you will need to include ```ng-view```.
+- In ```index.html``` you will need to include ```ng-view```.
+- ```template``` folder in home route.
