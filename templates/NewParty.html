@@ -1,52 +1,38 @@
-<!doctype html>
-<html lang="en" ng-app="partyApp">
-<head>
-	<meta charset="utf-8">
-		<link rel="stylesheet" href="css/app.css">
-	  <link rel="stylesheet" href="css/bootstrap.min.css">
-	 <title> TESTING PARTY </title>
-</head>
-<body>
 <div class="row">
-<div class="span11">
-<div class="firstdiv" ng-controller="CreateNewParty">
-	<form id="createNewParty" ng-submit="submit()">
-	<label for="partyName">Event Name</label>
-	<input id="partyName" type="text" required ng-model="name" placeholder="Name your Event"></br> 
-	<label for="partyOrganizer">Party Organizer</label>
-	<input id="partyOrganizer" type="text" required ng-model="organizer" placeholder="Organized by"></br> 
-	<label for="partyLocation">Party Location</label> 
-	<input id="partyLocation" type="text" style="width:37%; color:#52575c" ng-model="location" placeholder="Where"></br> 
-	<label for="partyDate"> On Date: </label>
-	<input id="partyDate" type="text" required ng-pattern="/\d\d/\d\d/\d\d\d/" ng-model="date" placeholder="DD/MM/YYYY"></br> 
-	<button type="submit" class="btn btn-primary">Create Party</button>
-	</form>
-	 <div ng-show="showMe()" class="row" >
+  <div class="span11">
+    <div class="firstdiv" ng-controller="CreateNewParty">
+      <form id="createNewParty" ng-submit="submit()">
+        <label for="partyName">Event Name</label>
+        <input id="partyName" type="text" required ng-model="name" placeholder="Name your Event">
+        </br>
+        <label for="partyOrganizer">Party Organizer</label>
+        <input id="partyOrganizer" type="text" required ng-model="organizer" placeholder="Organized by">
+        </br>
+        <label for="partyLocation">Party Location</label>
+        <input id="partyLocation" type="text" style="width:37%; color:#52575c" ng-model="location" placeholder="Where">
+        </br>
+        <label for="partyDate"> On Date: </label>
+        <input id="partyDate" type="text" required ng-pattern="/\d\d/\d\d/\d\d\d/" ng-model="date" placeholder="DD/MM/YYYY">
+        </br>
+        <button type="submit" class="btn btn-primary">Create Party</button>
+      </form>
+      <div ng-show="showMe()" class="row">
         <div class="span3">
-        		<div> <strong>Venue Name:{{party.name}}</strong></div>
-	          <div> <strong>Date:{{party.date}}</strong>
-	          </div>
-	          <div> <strong>Organizer:{{party.organizer}}</strong>
-	          </div>
+          <div> <strong>Venue Name:{{party.name}}</strong>
+          </div>
+          <div> <strong>Date:{{party.date}}</strong>
+          </div>
+          <div> <strong>Organizer:{{party.organizer}}</strong>
+          </div>
         </div>
-    </div>
-     <div>
+      </div>
+      <div>
         <div ng-show="showMe()" class="span4">
           <address> 
         		<strong> Address: {{party.location}}</strong>
     			</address>
-       	</div>
+        </div>
       </div>
-		</div>
+    </div>
+  </div>
 </div>
-</div>
-	<script src="bower_components/jquery/dist/jquery.js"></script>
-	<script src="bower_components/angular/angular.js"></script>
-	<script src="bower_components/angular-resource/angular-resource.js"></script>
-	<script src="bower_components/angular-route/angular-route.min.js"></script>
-	<script src="app.js"></script>
-	<script src="controllers/DisplayAvailableParty.js"></script>
-	<script src="controllers/CreateNewParty.js"></script>
-	 <!-- // <script src="services/PartyData.js"></script> -->
-</body>
-</html>
