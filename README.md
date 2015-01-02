@@ -64,3 +64,5 @@ karma init
 - ```index.html``` will be your SPA
 - In ```index.html``` you will need to include ```ng-view```.
 - ```template``` folder in home route (hint: remember difference between templates and views).
+- Refactor your html in the __template__ folder.
+- You don not need to specify your controller anymore.
