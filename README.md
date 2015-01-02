@@ -60,3 +60,6 @@ karma init
  ###Routing
 
  In this really trivial project I have included also routing and how to test $route in Angular.
+
+- ```index.html``` will be your SPA
+- in ```index.html``` you will need to include ```ng-view```.
