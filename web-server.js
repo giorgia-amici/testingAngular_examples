@@ -4,7 +4,6 @@ var server = require('http').createServer(app);
 var path = require('path')
 var fs = require('fs')
 var url = require('url')
-// var events = require('events')
 var bodyParser = require('body-parser')
 // var mkdirp = require('mkdirp');
 
@@ -26,9 +25,6 @@ app.get('/NewParty', function(request, response){
   response.render('NewParty')
 });
 
-// app.post('/', function(request, response){
-
-// });
 
 server.listen(3000, function(){
   console.log("Server listening on port 3000");

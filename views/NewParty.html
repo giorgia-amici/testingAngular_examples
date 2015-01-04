@@ -1,6 +1,15 @@
+<!doctype html>
+<html lang="en" ng-app="partyApp">
+<head>
+ <meta charset="utf-8">
+   <link rel="stylesheet" href="css/app.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title> TESTING PARTY </title>
+</head>
+<body>
 <div class="row">
   <div class="span11">
-    <div class="firstdiv">
+    <div class="firstdiv" ng-controller="CreateNewParty">
       <form id="createNewParty" ng-submit="submit()">
         <label for="partyName">Event Name</label>
         <input id="partyName" type="text" required ng-model="name" placeholder="Name your Event">
@@ -36,3 +45,13 @@
     </div>
   </div>
 </div>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="app.js"></script>
+<script src="controllers/DisplayAvailableParty.js"></script>
+<script src="controllers/CreateNewParty.js"></script>
+<!-- // <script src="services/PartyData.js"></script> -->
+</body>
+</html>
