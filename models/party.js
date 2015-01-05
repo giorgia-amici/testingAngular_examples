@@ -9,8 +9,7 @@ var partySchema = new Schema({
 });
 
 
-var PartyEvent = mongoose.model('PartyEvent', partySchema);
-
+module.exports = mongoose.model('PartyEvent', partySchema);
 
 // var name = new PartyEvent({ name: 'small' });
 // small.save(function (err) {
