@@ -83,4 +83,16 @@ mongoose.connect('mongodb://localhost/my_database');
 
 ```
 
-where ```my_database```is the name of the database you want to be connected to.
+where ```my_database```is the name of the database you want to be connected to. You can check if you are actually connected to the db by adding this to your server:
+
+```javascript
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function (callback) {
+  // yay the database is connected!
+});
+
+```
+
+After those steps need to create your Schema document. The Schema is the document that contains the caracteristics of your database entries. 
