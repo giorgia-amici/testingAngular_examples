@@ -29,6 +29,10 @@ app.get('/NewParty', function(request, response){
   response.render('NewParty')
 });
 
+// app.post('/NewParty', function(request, response){
+
+// });
+
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function (callback) {

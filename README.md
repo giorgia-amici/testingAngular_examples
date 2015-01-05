@@ -76,4 +76,11 @@ You first need to have mongo db installed on your machine. Then you need to inst
 ```javascript
 var mongoose = require('mongoose');
 ```
-with this command you are actually setting the connection.
+with this command you are actually setting the connection. After that you need to tell to your mongoose object where to look for a connection. You do that by typing:
+
+```javascript
+mongoose.connect('mongodb://localhost/my_database');
+
+```
+
+where ```my_database```is the name of the database you want to be connected to.
