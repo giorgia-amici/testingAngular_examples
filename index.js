@@ -5,17 +5,17 @@ var path = require('path');
 var fs = require('fs');
 var url = require('url');
 var bodyParser = require('body-parser');
+
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/partyapp');
 var db = mongoose.connection;
-// var data = require('./config');
 // var mkdirp = require('mkdirp');
+mongoose.set('debug', true);
+
 var Party = require('./models/Party');
-var halloween;
-
-
-halloween = new Party({})
-halloween.save()
+var party;
+party = new Party({name: 'gio', organizer: 'pablo', location:'london'})
+party.save()
 
 
 app.set('views', __dirname + '/views');
@@ -23,6 +23,8 @@ app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
 
 app.get('/', function(request, response){
   response.render('index')
@@ -33,17 +35,11 @@ app.get('/NewParty', function(request, response){
 });
 
 app.post('/parties', function(request, response){
-	console.log(request)
+	console.log(request.body)
 
-	request.body = {party: 'till you puke'}
-
-	response.status(200).json(request.body)
+	// response.status(200).json(request.body)
+	response.send({gio: 'ok'})
 });
-
-// app.get('/NewPartyAdded', function(request, response){
-// 	console.log('ciao')
-// 	response.render('index')
-// });
 
 
 db.on('error', console.error.bind(console, 'connection error:'));
