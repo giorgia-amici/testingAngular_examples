@@ -10,9 +10,12 @@ mongoose.connect('mongodb://localhost/partyapp');
 var db = mongoose.connection;
 // var data = require('./config');
 // var mkdirp = require('mkdirp');
-require('./models/Party');
+var Party = require('./models/Party');
+var halloween;
 
 
+halloween = new Party({})
+halloween.save()
 
 
 app.set('views', __dirname + '/views');
