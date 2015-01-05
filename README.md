@@ -68,3 +68,6 @@ karma init
 - You don not need to specify your controller anymore.
 - **IMPORTANT STEP**: you need to change your __module__ .You need to insert the ```.config``` and keep in mind that will still return a  module hence, you can still concatenate your factory methods.
 - Inject all the new dependencies (check the version of angular you are actually using).
+
+##**Using MongoDB**
+This is the most difficult part of the project. The aim is to save the user's input from the 'Create a New Event' form and save the input in a db.
