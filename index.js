@@ -29,7 +29,7 @@ app.get('/NewParty', function(request, response){
   response.render('NewParty')
 });
 
-var db = mongoose.connection;
+
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function (callback) {
   console.log('The dabase is connected!')
