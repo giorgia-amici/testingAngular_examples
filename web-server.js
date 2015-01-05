@@ -1,10 +1,12 @@
 var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
-var path = require('path')
-var fs = require('fs')
-var url = require('url')
-var bodyParser = require('body-parser')
+var path = require('path');
+var fs = require('fs');
+var url = require('url');
+var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var data = require('./config');
 // var mkdirp = require('mkdirp');
 
 
@@ -24,6 +26,11 @@ app.get('/', function(request, response){
 app.get('/NewParty', function(request, response){
   response.render('NewParty')
 });
+
+connectDB(data.dbUrl)
+.then(function() {
+    console.log("connected to mongodb successfully!")
+})
 
 
 server.listen(3000, function(){
