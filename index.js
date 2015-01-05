@@ -32,14 +32,19 @@ app.get('/NewParty', function(request, response){
   response.render('NewParty')
 });
 
-// app.post('/NewParty', function(request, response){
+app.post('/NewPartyAdded', function(request, response){
+	response.status(200).json(request.body)
+});
 
+// app.get('/NewPartyAdded', function(request, response){
+// 	console.log('ciao')
+// 	response.render('index')
 // });
 
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function (callback) {
-  console.log('The dabase is connected!')
+  console.log('The database is connected!')
 });
 
 

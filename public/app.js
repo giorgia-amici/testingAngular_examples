@@ -1,4 +1,4 @@
-var partyApp = angular.module('partyApp', ['ngRoute']);
+var partyApp = angular.module('partyApp', ['ngRoute', 'ngResource']);
 	// .config(function($routeProvider){
 		// $routeProvider.when('/NewParty',
 		// {
