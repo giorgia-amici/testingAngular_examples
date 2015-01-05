@@ -95,4 +95,12 @@ db.once('open', function (callback) {
 
 ```
 
-After those steps need to create your Schema document. The Schema is the document that contains the caracteristics of your database entries. 
+After those steps need to create your Schema document and with Mongoose everything is derived from a Schema. The Schema is the document that contains the caracteristics of your database entries. An example might be:
+
+```javascript
+var mySchema = mongoose.Schema({
+    name: String
+})
+```
+
+Remember then to export your schema with ```module.exports = mongoose.model('PartyEvent', partySchema);```.
