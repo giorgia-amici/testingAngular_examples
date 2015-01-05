@@ -10,6 +10,7 @@ mongoose.connect('mongodb://localhost/partyapp');
 var db = mongoose.connection;
 // var data = require('./config');
 // var mkdirp = require('mkdirp');
+require('./models/Party');
 
 
 
@@ -19,7 +20,6 @@ app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({extended: false}));
-
 
 app.get('/', function(request, response){
   response.render('index')

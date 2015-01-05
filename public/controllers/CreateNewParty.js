@@ -1,3 +1,5 @@
+// var Story = require('../models/Party');
+
 partyApp.controller('CreateNewParty',
 	function CreateNewParty($scope){
 			$scope.submit = function(){
@@ -8,6 +10,23 @@ partyApp.controller('CreateNewParty',
 			};
 		}
 );
+
+            // storyDocument = new Story({
+            //     source: story.source,
+            //     title: story.title,
+            //     description: story.description,
+            //     link: story.link,
+            //     pubDate: story.pubDate
+            // });
+            // storyDocument.save(function(err) {
+            //     if (err) {
+            //     console.log(err);
+            //     } else{
+            //         // console.log('new document saved')
+            //     } 
+            // });
+
+
 
 
 

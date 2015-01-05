@@ -8,4 +8,12 @@ var partySchema = new Schema({
 	date: {type: Date, default:Date.now}
 });
 
-module.exports = mongose.model('Party', partySchema);
+
+var PartyEvent = mongoose.model('PartyEvent', partySchema);
+
+
+// var name = new PartyEvent({ name: 'small' });
+// small.save(function (err) {
+//   if (err) return handleError(err);
+//   console.log('saved!')
+// })
