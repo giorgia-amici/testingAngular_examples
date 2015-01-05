@@ -6,7 +6,9 @@ var fs = require('fs');
 var url = require('url');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var data = require('./config');
+mongoose.connect('mongodb://localhost/partyapp');
+var db = mongoose.connection;
+// var data = require('./config');
 // var mkdirp = require('mkdirp');
 
 
@@ -27,10 +29,11 @@ app.get('/NewParty', function(request, response){
   response.render('NewParty')
 });
 
-connectDB(data.dbUrl)
-.then(function() {
-    console.log("connected to mongodb successfully!")
-})
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function (callback) {
+  console.log('The dabase is connected!')
+});
 
 
 server.listen(3000, function(){
