@@ -71,3 +71,9 @@ karma init
 
 ##**Using MongoDB**
 This is the most difficult part of the project. The aim is to save the user's input from the 'Create a New Event' form and save the input in a db.
+
+You first need to have mongo db installed on your machine. Then you need to install mongoose by typing ```npm install mongoose```. Add this to your server:
+```javascript
+var mongoose = require('mongoose');
+```
+with this command you are actually setting the connection.
