@@ -32,7 +32,11 @@ app.get('/NewParty', function(request, response){
   response.render('NewParty')
 });
 
-app.post('/NewPartyAdded', function(request, response){
+app.post('/parties', function(request, response){
+	console.log(request)
+
+	request.body = {party: 'till you puke'}
+
 	response.status(200).json(request.body)
 });
 
