@@ -14,8 +14,8 @@ mongoose.set('debug', true);
 
 var Party = require('./models/Party');
 var party;
-party = new Party({name: 'gio', organizer: 'pablo', location:'london'})
-party.save()
+// party = new Party({name: 'gio', organizer: 'pablo', location:'london'})
+// party.save()
 
 
 app.set('views', __dirname + '/views');
@@ -36,7 +36,8 @@ app.get('/NewParty', function(request, response){
 
 app.post('/parties', function(request, response){
 	console.log(request.body)
-
+party = new Party(request.body)
+party.save();
 	// response.status(200).json(request.body)
 	response.send({gio: 'ok'})
 });
