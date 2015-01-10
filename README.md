@@ -55,7 +55,26 @@ karma init
  ```
 
  Be aware that the config file has to be accurate or your tests won't run. See [this](http://karma-runner.github.io/0.8/config/configuration-file.html) link for more information.
+
+ In order to test different services, I have then used ngMock. To have ngMock, run the following command:
+
+ ```javascript
+npm install --save-dev angular-mocks
+
+ ```
  
+ Then you need to edit the files array from the ```karma.conf.js``` to include ```ngMock```.
+
+```javascript
+
+files: [ 'node_modules/angular-mocks/angular-mocks.js'. './src/**/*.js', './test/**/*.js' ]
+
+```
+
+
+##Testing a Service
+
+
 
 ##**Routing**
 
