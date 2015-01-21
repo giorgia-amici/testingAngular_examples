@@ -9,13 +9,10 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/partyapp');
 var db = mongoose.connection;
-// var mkdirp = require('mkdirp');
 mongoose.set('debug', true);
-
 var Party = require('./models/Party');
 var party;
-// party = new Party({name: 'gio', organizer: 'pablo', location:'london'})
-// party.save()
+
 
 
 app.set('views', __dirname + '/views');
@@ -36,11 +33,16 @@ app.get('/NewParty', function(request, response){
 
 app.post('/parties', function(request, response){
 	console.log(request.body)
-party = new Party(request.body)
-party.save();
-	// response.status(200).json(request.body)
-	response.send({gio: 'ok'})
+	party = new Party(request.body)
+	party.save();
+		response.send({gio: 'ok'})
 });
+
+Party.findOne({"name" : "rnjfberbhpi"}, function(err, theParty){
+	if(err) return console.log(err);
+	console.log("success", theParty)
+
+})
 
 
 db.on('error', console.error.bind(console, 'connection error:'));
