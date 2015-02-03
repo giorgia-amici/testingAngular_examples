@@ -1,4 +1,6 @@
 #**The importance of TDD: Testing Angular**
+<img src = https://img.shields.io/badge/ONGOING-project-orange.svg>
+
 
 The app is one of my previous project. The main aim of this exercise is to learn how to:
 
